@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>MainThread</h1>
+    <h1>Main Thread</h1>
     <button class="btn" @click="generate">Generate</button>
     <generated-nums :nums="nums"/>
   </div>
