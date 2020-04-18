@@ -10,20 +10,6 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Inspiration:
+[Thank you Abdelrahman Awad for the article](https://logaretm.com/blog/2019-12-21-vuex-off-mainthread/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter).
