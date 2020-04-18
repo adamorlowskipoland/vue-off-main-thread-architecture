@@ -15,12 +15,12 @@
 </template>
 
 <script>
-  import InfoBox from './components/InfoBox.vue'
-  import MainThread from './components/MainThread.vue'
-  import OffMainThread from './components/OffMainThread.vue'
+  import InfoBox from "./components/InfoBox.vue"
+  import MainThread from "./components/MainThread.vue"
+  import OffMainThread from "./components/OffMainThread.vue"
 
   export default {
-    name: 'App',
+    name: "App",
     components: {
       InfoBox,
       MainThread,
@@ -29,7 +29,7 @@
     data() {
       return {
         loading: false,
-      }
+      };
     },
   };
 </script>

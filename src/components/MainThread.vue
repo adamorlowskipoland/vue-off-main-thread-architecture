@@ -11,7 +11,7 @@
   import { calculatePrimes } from "../heavy-task";
 
   export default {
-    name: 'MainThread',
+    name: "MainThread",
     components: { GeneratedNums },
     data() {
       return {
@@ -20,10 +20,10 @@
     },
     methods: {
       generate() {
-        this.$emit('loading', true)
+        this.$emit("loading", true)
         this.nums = calculatePrimes(400, 1000000000)
-        this.$emit('loading', false)
-      }
+        this.$emit("loading", false)
+      },
     },
-  }
+  };
 </script>

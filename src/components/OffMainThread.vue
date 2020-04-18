@@ -9,10 +9,10 @@
 <script>
   import GeneratedNums from "./GeneratedNums";
 
-  const bgCalc = new Worker('../background-calc-worker.js', { type: 'module' });
+  const bgCalc = new Worker("../background-calc-worker.js", { type: "module" });
 
   export default {
-    name: 'OffMainThread',
+    name: "OffMainThread",
     components: { GeneratedNums },
     data() {
       return {
@@ -26,7 +26,7 @@
         if (this.error) {
           this.error = null;
         }
-        bgCalc.postMessage({ method: 'calculatePrimes', args: [400, 1000000000] });
+        bgCalc.postMessage({ method: "calculatePrimes", args: [400, 1000000000] });
       },
     },
     created() {

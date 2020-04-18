@@ -13,8 +13,8 @@
     props: {
       nums: {
         type: Array,
-        default: () => ([])
-      }
-    }
-  }
+        default: () => ([]),
+      },
+    },
+  };
 </script>
