@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <div class="wrap">
+    <info-box />
+    <div class="wrap text--center">
       <main-thread @loading="loading = $event"/>
       <off-main-thread @loading="loading = $event"/>
     </div>
@@ -15,12 +15,14 @@
 </template>
 
 <script>
+  import InfoBox from './components/InfoBox.vue'
   import MainThread from './components/MainThread.vue'
   import OffMainThread from './components/OffMainThread.vue'
 
   export default {
     name: 'App',
     components: {
+      InfoBox,
       MainThread,
       OffMainThread,
     },
@@ -37,9 +39,12 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+
+  .text--center {
+    text-align: center;
   }
 
   .wrap {
