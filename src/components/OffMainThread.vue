@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>OffMainThread</h1>
-    <button class="btn" @click="generate">Generate</button>
+    <button class="btn" @click="generate">Generate {{loading}}</button>
     <generated-nums :nums="nums"/>
   </div>
 </template>
@@ -16,21 +16,27 @@
     components: { GeneratedNums },
     data() {
       return {
-        nums: []
+        nums: [],
+        loading: false,
       }
     },
     methods: {
       generate() {
-        this.$emit('loading', true)
+        // this.$emit('loading', true)
         bgCalc.postMessage({ method: 'calculatePrimes', args: [400, 1000000000] });
-        this.$emit('loading', false)
+        // this.$emit('loading', false)
       }
     },
     created() {
       bgCalc.onmessage = e => {
         console.log('%c OffMainThread.vue, , , , ', 'color: yellow; font-weight: 700',e);
-        this.nums = e.data.nums;
+        this[e.data.key] = e.data.value;
       };
+    },
+    watch: {
+      loading(update) {
+        this.$emit("loading", update)
+      }
     }
   }
 </script>
