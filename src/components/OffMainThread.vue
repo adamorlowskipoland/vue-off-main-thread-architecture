@@ -2,6 +2,7 @@
   <div>
     <h1>Outside Main Thread</h1>
     <button class="btn" @click="generate">Generate</button>
+    <button class="btn" @click="nums = []">Reset</button>
     <generated-nums :nums="nums"/>
   </div>
 </template>
