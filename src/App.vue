@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <info-box />
-    <div class="wrap text--center">
-      <main-thread @loading="loading = $event"/>
-      <off-main-thread @loading="loading = $event"/>
+    <div class="wrap">
+      <div>
+        <info-box/>
+        <main-thread @loading="loading = $event"/>
+      </div>
+      <div>
+        <info-box correct/>
+        <off-main-thread @loading="loading = $event"/>
+      </div>
     </div>
     <img
       v-if="loading"
-      src="https://i0.wp.com/static.onemansblog.com/wp-content/uploads/2016/05/clock-loading.gif"
+      src="https://tradinglatam.com/wp-content/uploads/2019/04/loading-gif-png-4.gif"
       alt="Loading circle."
       class="loader"
     >
