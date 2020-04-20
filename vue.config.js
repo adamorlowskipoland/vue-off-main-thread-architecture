@@ -6,6 +6,6 @@ module.exports = {
     config.plugin("worker").use(WorkerPlugin);
   },
   publicPath: process.env.NODE_ENV === "production"
-    ? "/vue-off-main-thread-architecture/"
+    ? "/vue-off-main-thread-architecture"
     : "/",
 };
