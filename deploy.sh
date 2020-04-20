@@ -13,7 +13,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:<adamorlowskipoland>/<adamorlowskipoland>.github.io.git master
+git push -f git@github.com:adamorlowskipoland/adamorlowskipoland.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<adamorlowskipoland>/<vue-off-main-thread-architecture>.git master:gh-pages
