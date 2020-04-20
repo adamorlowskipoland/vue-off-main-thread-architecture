@@ -5,5 +5,7 @@ module.exports = {
   chainWebpack: config => {
     config.plugin("worker").use(WorkerPlugin);
   },
-  publicPath: "/vue-off-main-thread-architecture/",
+  publicPath: process.env.NODE_ENV === "production"
+    ? "/vue-off-main-thread-architecture/"
+    : "/",
 };

@@ -4,7 +4,7 @@ const calculations = {
   calculatePrimes,
 };
 
-addEventListener("message", (event) => {
+self.addEventListener("message", (event) => {
   postMessage({ key: "working", value: true });
   if (Object.keys(calculations).includes(event.data.method)) {
     postMessage({
