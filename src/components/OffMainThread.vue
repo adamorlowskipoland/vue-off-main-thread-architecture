@@ -18,7 +18,6 @@
     data() {
       return {
         nums: [],
-        working: false,
         error: null,
       };
     },
@@ -32,8 +31,11 @@
     },
     created() {
       bgCalc.onmessage = (event) => {
-        this[event.data.key] = event.data.value;
-        this.$emit("loading", event.data.value)
+        if (event.data.key === "working") {
+          this.$emit("loading", event.data.value)
+        } else {
+          this[event.data.key] = event.data.value;
+        }
       };
     },
   };
