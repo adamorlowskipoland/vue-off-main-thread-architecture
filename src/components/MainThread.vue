@@ -16,14 +16,14 @@
     components: { GeneratedNums },
     data() {
       return {
-        nums: []
-      }
+        nums: [],
+      };
     },
     methods: {
       generate() {
-        this.$emit("loading", true)
-        this.nums = calculatePrimes(400, 1000000000)
-        this.$emit("loading", false)
+        this.$emit("loading", true);
+        this.nums = calculatePrimes(400, 1000000000);
+        this.$emit("loading", false);
       },
     },
   };
