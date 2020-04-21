@@ -9,7 +9,7 @@
       </li>
       <li>Loader will
         <span v-if="!correct"><b>not</b></span>
-        appear<span v-if="!correct">, even so it is fired</span>
+        appear<span v-if="!correct">, even though it is fired</span>
       </li>
       <li>
         <label :for="`checkbox-test${correct ? '--correct' : ''}`" class="clickable">
